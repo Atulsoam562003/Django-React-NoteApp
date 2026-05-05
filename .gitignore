@@ -1,0 +1,94 @@
+# =========================
+# 🔹 GENERAL
+# =========================
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+.env
+.env.*
+*.local
+
+# =========================
+# 🔹 DJANGO
+# =========================
+*.mo
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+coverage.xml
+htmlcov/
+.cache/
+
+# Django migrations (⚠️ optional, see note below)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# =========================
+# 🔹 DJANGO SETTINGS / SECRETS
+# =========================
+secret.json
+secrets.yml
+
+# =========================
+# 🔹 VIRTUAL ENV
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# 🔹 REACT / NODE
+# =========================
+node_modules/
+dist/
+build/
+dist-ssr/
+.next/
+out/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# 🔹 EDITORS / OS
+# =========================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🔹 TYPESCRIPT / CACHE
+# =========================
+*.tsbuildinfo
+
+# =========================
+# 🔹 TEST / COVERAGE
+# =========================
+coverage/
+.coverage
+.tox/
+
+# =========================
+# 🔹 MISC
+# =========================
+*.swp
+*.swo
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+token.json
