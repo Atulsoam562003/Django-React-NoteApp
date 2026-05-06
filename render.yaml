@@ -2,6 +2,7 @@ services:
   - type: web
     name: django-react-backend
     runtime: python
+    plan: free
     rootDir: backend
     buildCommand: ./build.sh
     startCommand: python -m gunicorn backend.asgi:application -k uvicorn.workers.UvicornWorker
@@ -23,5 +24,6 @@ services:
 
 databases:
   - name: django-react-db
+    plan: free
     databaseName: django_react
     user: django_react
