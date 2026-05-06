@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: django-react-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: ./build.sh
+    startCommand: python -m gunicorn backend.asgi:application -k uvicorn.workers.UvicornWorker
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: django-react-db
+          property: connectionString
+
+databases:
+  - name: django-react-db
+    databaseName: django_react
+    user: django_react
